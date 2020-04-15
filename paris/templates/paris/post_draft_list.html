@@ -1,0 +1,10 @@
+{% extends 'paris/base.html' %}
+  {% block content %}
+    <div class="post">
+      <p class='date'>created: {{ post.created_date|Date:"d-m-Y"}}</p>
+      <a href="{% url 'post_detail' pk=post.pk %}"></a>
+      <p>{{ post.text|truncate.chars:200}}</p>
+
+
+    </div>
+  {% endblock %}
